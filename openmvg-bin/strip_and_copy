@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e
+BIN=$HOME/local/bin/
+strip $BIN/*
+cp -av $BIN/* /mnt/bin
+
