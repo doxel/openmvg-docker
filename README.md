@@ -2,7 +2,7 @@
 
 Scripts to build docker containers for [openMVG](https://github.com/openmvg/openMVG)
 
-Copyright (C) 2017 Alsenet SA
+Copyright (C) 2017 [Alsenet SA](http://www.alsenet.com)
                      
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
