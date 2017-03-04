@@ -1,6 +1,6 @@
 # openmvg-docker
 
-    Scripts to build docker containers for https://github.com/openmvg/openMVG
+    Scripts to build docker containers for [openMVG](https://github.com/openmvg/openMVG)
 
     Copyright (C) 2017 Alsenet SA
                      
