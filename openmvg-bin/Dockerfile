@@ -9,7 +9,10 @@ RUN useradd --create-home --shell /bin/bash $user \
       libgomp1 \
       libjpeg62-turbo \
       libpng16-16 \
-      libtiff5
+      libtiff5 \
+ && apt-get autoclean \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # install openmvg binaries
 ADD ./bin/* /usr/bin/
