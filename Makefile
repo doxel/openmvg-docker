@@ -8,5 +8,8 @@ subdirs: $(SUBDIRS)
 $(SUBDIRS):
 	$(MAKE) -C $@ $(MAKECMDGOALS)
 
-.PHONY: all subdirs $(SUBDIRS)
+install:
+	$(MAKE) -C bin install
+
+.PHONY: all subdirs install $(SUBDIRS)
 
