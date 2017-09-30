@@ -8,10 +8,13 @@ SYNOPSIS
        [DOCKER_OPTIONS="--name=example"] $(basename $0) COMMAND [ARG ...]
 
 DESCRIPTION
-       Run an openMVG command in a penmvg-docker container.
-       The defaults docker options are preset to "-v /mnt:/mnt -it --rm=true".
-       You may want to override the DOCKER_DEFAULTS environment variable or to
-       supply additional options using DOCKER_OPTIONS.
+       Run an openMVG command in an openmvg-docker container.
+
+       The defaults docker parameters ("-v /mnt:/mnt -it --rm=true") can
+       be overriden with the DOCKER_DEFAULTS environment variable.
+
+       You can supply additional parameters using the DOCKER_OPTIONS
+       environment variable.
 
 EOF
 exit 1
