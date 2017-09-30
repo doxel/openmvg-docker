@@ -16,3 +16,19 @@ GNU Affero General Public License for more details.
                  
 You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+## BUILD
+```
+make
+```
+
+## INSTALL
+```
+make install
+```
+
+## USE
+For example:
+```
+DOCKER_OPTIONS="-v /mnt:/mnt -it --rm=true" openMVG_main_SfMInit_ImageListing -i /mnt/segment/images -o /mnt/segment/openMVG
+```
