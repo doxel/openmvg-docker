@@ -1,0 +1,2 @@
+#!/bin/bash
+docker run -v /mnt:/mnt -it openmvg-bin $(basename $0) $@
