@@ -1,2 +1,22 @@
 #!/bin/bash
-docker run -v /mnt:/mnt -it openmvg-bin $(basename $0) $@
+usage() {
+cat << EOF
+NAME
+       $(basename $0) - run an openMVG command in openmvg-docker container
+
+SYNOPSIS
+       [DOCKER_OPTIONS="-v /mnt:/mnt -it"] $(basename $0) COMMAND [ARG ...]
+
+DESCRIPTION
+       Run an openMVG command in a penmvg-docker container.
+       Specify all the docker-run options using the DOCKER_OPTIONS
+       environment variable, which defaults to "-v /mnt:/mnt -it"
+
+EOF
+exit 1
+}
+
+[ "$1" = '-h' -o "$1" = '--help' ] && usage
+
+DOCKER_OPTIONS={$DOCKER_OPTIONS:-"-v /mnt:/mnt -it"}
+echo docker run $DOCKER_OPTIONS openmvg-bin $(basename $0) $@
