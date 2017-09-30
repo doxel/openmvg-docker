@@ -19,4 +19,4 @@ exit 1
 [ "$1" = '-h' -o "$1" = '--help' ] && usage
 
 DOCKER_OPTIONS={$DOCKER_OPTIONS:-"-v /mnt:/mnt -it"}
-echo docker run $DOCKER_OPTIONS openmvg-bin $(basename $0) $@
+docker run $DOCKER_OPTIONS openmvg-bin $(basename $0) $@
