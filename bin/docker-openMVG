@@ -10,7 +10,7 @@ SYNOPSIS
 DESCRIPTION
        Run an openMVG command in a penmvg-docker container.
        The defaults docker options are preset to "-v /mnt:/mnt -it --rm=true".
-       You may want to override the DOCKER_DEFULTS environment variable or to
+       You may want to override the DOCKER_DEFAULTS environment variable or to
        supply additional options using DOCKER_OPTIONS.
 
 EOF
