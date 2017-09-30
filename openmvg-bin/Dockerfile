@@ -15,7 +15,8 @@ RUN useradd --create-home --shell /bin/bash $user \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # install openmvg binaries
-ADD ./bin/* /usr/bin/
+ADD bin/* /usr/bin/
+COPY share/openMVG/ /usr/share/openMVG/
 
 # check for missing libs
 RUN if \

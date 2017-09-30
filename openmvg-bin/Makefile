@@ -4,6 +4,6 @@ build:
 	./build.sh
 
 clean:
-	rm bin/openMVG*
+	rm bin/openMVG* share/* -r
 
 .PONY: all build

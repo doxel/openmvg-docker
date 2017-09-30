@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
-BIN=$HOME/local/bin/
-strip $BIN/*
-cp -av $BIN/* /mnt/bin
 
+BIN=$HOME/local/bin
+strip $BIN/*
+cp -av $BIN/* /mnt/bin/
+
+SHARE=$HOME/local/share
+cp -av $SHARE/* /mnt/share/
