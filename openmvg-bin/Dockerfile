@@ -10,6 +10,7 @@ RUN useradd --create-home --shell /bin/bash $user \
       libjpeg62-turbo \
       libpng16-16 \
       libtiff5 \
+      graphviz \
  && apt-get autoclean \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
