@@ -1,5 +1,6 @@
-all: clean build
 PREFIX ?= /usr/local
+
+all: clean build
 
 clean:
 	find . -maxdepth 1 -name 'openMVG_main_*' -exec rm \{} \;
@@ -13,5 +14,4 @@ install:
 uninstall:
 	find -maxdepth 1 -name 'openMVG*' -exec rm ${PREFIX}/bin/\{} \;
 
-
-.PHONY: all build
+.PHONY: all clean build install uninstall
