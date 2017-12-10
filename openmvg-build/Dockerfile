@@ -36,8 +36,6 @@ RUN mkdir src \
  && git clone --single-branch -b $branch --recursive https://github.com/openmvg/openmvg src/openMVG \
  && cd src/openMVG \
  && git submodule update --init --recursive \
- && wget https://github.com/openMVG/openMVG/commit/b51afc89b391b255fdda02bff67ff62c68212a09.patch -O /tmp/b51afc89b391b255fdda02bff67ff62c68212a09.patch \
- && ( patch -p1 -f < /tmp/b51afc89b391b255fdda02bff67ff62c68212a09.patch || true ) \
  && mkdir build \
  && cd build \
  && cmake \
