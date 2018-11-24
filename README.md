@@ -37,6 +37,11 @@ or:
 DOCKER_OPTIONS="-v /mnt:/mnt -it --rm=true" openMVG_main_SfMInit_ImageListing -i /mnt/segment/images -o /mnt/segment/openMVG
 ```
 
+You can list available commands with:
+```
+docker run -it --rm openmvg-bin ls bin
+```
+
 ## NOTES
 You can set various docker-run options using DOCKER_OPTIONS environment variable eg: --cpus 0.5
 
