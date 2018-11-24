@@ -1,8 +1,8 @@
 # openmvg-docker
 
-Scripts to build docker containers for [openMVG](https://github.com/openmvg/openMVG)
+Run [openMVG](https://github.com/openmvg/openMVG) commands in docker containers.
 
-Copyright (C) 2017 [Alsenet SA](http://www.alsenet.com)
+Copyright (C) 2018 [Alsenet SA](http://www.alsenet.com)
                      
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
@@ -24,11 +24,23 @@ make
 
 ## INSTALL
 ```
-make install
+PREFIX=/usr/local make install
 ```
 
 ## USE
 For example:
 ```
+openMVG_main_SfMInit_ImageListing -i /mnt/segment/images -o /mnt/segment/openMVG
+```
+or:
+```
 DOCKER_OPTIONS="-v /mnt:/mnt -it --rm=true" openMVG_main_SfMInit_ImageListing -i /mnt/segment/images -o /mnt/segment/openMVG
+```
+
+## NOTES
+You can set various docker-run options using DOCKER_OPTIONS environment variable eg: --cpus 0.5
+
+Default docker-run options are:
+```
+DOCKER_OPTIONS="-v /mnt:/mnt -it --rm=true"
 ```
